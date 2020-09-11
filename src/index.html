@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="stylesheet.css"> -->
+    <script src="bundle.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="hioflogo">HIOF</h1>
+        <h2 class="user">User user</h2>
+    </header>
+    <main class="main">
+        <section class="addBtn" id="addBtn">
+            <h2>Todo +</h2>
+        </section>
+        <section class="todocardContainer" id="todocardContainerid">
+            
+        </section>
+        <section class="completed">
+            <h3 class="completedHeader">Completed todos</h3>
+            <ul class="completedList" id="completedListContainer">
+            </ul>
+        </section>
+    </main>
+    <section class="popupContainer" id="popupContainer">
+        <section class="popupMain">
+            <section class="popupHeader">
+                <h3>Create</h3>
+                <p id="exitBtn">&#10005;</p>
+            </section>
+            <form class="popupForm" id="form">
+                <section class="formTitle">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" class="input">
+                </section>
+                <section class="formDescription">
+                    <label for="description">Description(30 char left)</label>
+                    <input type="text" id="description" name="description" class="input">
+                </section>
+                <section class="formAuthor">
+                    <label for="autor">Author</label>
+                    <input type="text" id="author" name="author" class="input">
+                </section>
+                <input type="submit" value="Create" class="createBtn">
+            </form>
+        </section>
+    </section>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* stylesheet.css */
+
+body {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+  max-width: 1366px;
+  margin: auto;
+}
+
+/*Header----------------------------------------*/
+.header {
+  top: 0px;
+  left: 0px;
+  width: 1366px;
+  height: 63px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 10px #00000019;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hioflogo {
+  width: 52px;
+  height: 27px;
+  margin-left: 30px;
+  text-align: left;
+  font: normal normal 900 20px/27px Avenir Next;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.user {
+  width: 120px;
+  height: 27px;
+  margin-right: 30px;
+  text-align: left;
+  font: normal normal medium 20px/27px Avenir Next;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+}
+
+/*Main area----------------------------------------------------*/
+.main {
+}
+
+.addBtn {
+  width: 183px;
+  height: 51px;
+  margin-top: 140px;
+  margin-bottom: 70px;
+  border: 1px solid #333333;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.todocardContainer {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* The cards themself---------------------------------------------------------*/
+.todocard {
+  height: 250px;
+  width: 400px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 16px #5DD3D829;
+  border-radius: 8px;
+  opacity: 1;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+}
+
+.todocardHeader {
+  text-align: left;
+  font: normal normal bold 16px/22px Avenir Next;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  margin-top: 30px;
+  margin-left: 30px;
+
+}
+
+.todocardDescription {
+  text-align: left;
+  font: normal normal normal 14px/19px Avenir Next;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.deleteBtn {
+  grid-area: bottom2;
+  width: 77px;
+  height: 23px;
+  background: #EF3340 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  border: none;
+  opacity: 1;
+  grid-column-start: 3;
+  grid-column-end: span 3;
+  grid-row-start: 3;
+  grid-row-end: span 3;
+  color: white;
+
+}
+
+.completeBtn {
+  grid-area: bottom3;
+  width: 77px;
+  height: 23px;
+  background: #56D4C2 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  border: none;
+  opacity: 1;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 3;
+  grid-row-end: span 3;
+  color: white;
+}
+
+/* Liste-element nederst på siden------------------------------------------------------------*/
+
+.completed{
+  grid-area: completed;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "title . checkbox"
+                      "table table table";
+
+}
+
+.completedHeader{
+  grid-area: title;
+  margin: 0;
+
+  text-align: left;
+  font: normal normal bold 16px/22px Arial, Helvetica;
+  letter-spacing: 0px;
+  color: #333333;
+}
+
+.completedList{
+  padding:0;
+  grid-area: table;
+}
+
+.completedList li{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;   
+}
+
+.completedList li:first-child{
+  background: #E6E6E6 0% 0% no-repeat padding-box;
+
+  text-align: left;
+  font: normal normal bold 14px/19px Arial, Helvetica;
+  letter-spacing: 0px;
+  color: #363636;
+}
+
+.completedList li>*{
+  margin: 0;
+  padding-block: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  font: normal normal bold 14px/19px Arial, Helvetica;
+  letter-spacing: 0px;
+  color: #363636;
+}
+
+.completedList li>*:first-child{
+  margin-left: 20%;
+}
+
+/* popup form------------------------------------------------*/
+
+.popupContainer{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+
+  width:  100vw;
+  height: 100vh;
+
+
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popupMain{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 8px #00000029;
+  border-radius: 8px;
+  width: 320px;
+  height: 380px;
+
+  margin: 10% auto;
+  padding: 20px;
+}
+
+.popupHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  border-bottom: 1px solid lightcyan;
+}
+
+.popupHeader>*{
+  margin-inline: 5%;
+
+}
+
+.popupHeader h3{
+  font: normal normal bold 14px/43px Helvetica;
+  letter-spacing: 0px;
+  color: #333333;
+}
+
+.popupHeader p{
+  padding-top: 3%;
+}
+
+.popupHeader p:hover{
+  cursor: pointer;
+}
+
+.popupForm section{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 5%;
+  margin-inline: 10%;
+
+  font: normal normal bold 12px/17px Helvetica;
+  letter-spacing: 0px;
+  color: #333333;
+}
+
+.input{
+  border: 1px solid #B6B6B6;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.createBtn{
+  margin-top: 5%;
+  margin-inline: 10%;
+  margin-left: 10%;
+  width: 80%;
+  background: #56D4C2 0% 0% no-repeat padding-box;
+  border-style: none;
+  font: normal normal bold 16px/22px Arial, Helvetica;
+  color:white;
+}
+  
